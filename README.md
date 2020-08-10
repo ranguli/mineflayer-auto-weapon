@@ -1,7 +1,6 @@
-# mineflayer-auto-totem
+# mineflayer-auto-weapon
 
-Automatically move totems from your bots inventory into its offhand as they
-break. This is the same thing as the "Auto Totem" feature in many hacked
+Automatically equips the best weapon your bot has. This is just like the "Auto Weapon" module in many hacked
 minecraft clients, but now for your mineflayer bot!
 
 # Usage
@@ -9,14 +8,14 @@ minecraft clients, but now for your mineflayer bot!
 ```javascript
 
 const mineflayer = require('mineflayer');
-const autoArmor = require('..')(mineflayer);
+const autoWeapon = require('mineflayer-auto-weapon');
 
 const bot = mineflayer.createBot({...}); // Create your bot here
 
-bot.loadPlugin(autoArmor); // Load the plugin
+bot.loadPlugin(autoWeapon); // Load the plugin
 
 bot.on('login', () => {
-  bot.enableAutoTotem(); // Enable auto totem
+  bot.enableAutoWeapon(); // Enable auto weapon
 });
 
 ```
